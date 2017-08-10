@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/hope.iml" filepath="$PROJECT_DIR$/.idea/hope.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../plexus/.idea/plexus.iml" filepath="$PROJECT_DIR$/../plexus/.idea/plexus.iml" />
     </modules>
   </component>
 </project>
