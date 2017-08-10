@@ -25,7 +25,10 @@ SECRET_KEY = '!pa+jx$3(dcb9-ywa+7ixnvq9#x&l1h)aogqwn#h02x%!*tku3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [u'plexus-test.herokuapp.com']
+ALLOWED_HOSTS = [
+    u'plexus-test.herokuapp.com',
+    u'127.0.0.1'
+]
 
 
 # Application definition
