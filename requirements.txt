@@ -13,7 +13,6 @@ colorama==0.3.7
 configparser==3.5.0
 cycler==0.10.0
 decorator==4.0.10
-defer==1.0.6
 descartes==1.1.0
 dicttoxml==1.7.4
 Django==1.10.5
