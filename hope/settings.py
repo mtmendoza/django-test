@@ -82,8 +82,7 @@ WSGI_APPLICATION = 'hope.wsgi.application'
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
 DATABASES = {}
-DATABASES['default'] = dj_database_url.config(default='postgres://user:pass@host/db')
-DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
+DATABASES['default'] = dj_database_url.config()
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
