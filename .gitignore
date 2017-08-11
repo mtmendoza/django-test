@@ -4,5 +4,6 @@ __pycache__
 env1
 db.sqlite3
 /static
+/staticfiles
 .DS_Store
 local_settings.py

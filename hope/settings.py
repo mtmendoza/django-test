@@ -26,10 +26,7 @@ SECRET_KEY = '!pa+jx$3(dcb9-ywa+7ixnvq9#x&l1h)aogqwn#h02x%!*tku3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [
-    u'plexus-test.herokuapp.com',
-    u'127.0.0.1'
-]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -80,9 +77,21 @@ WSGI_APPLICATION = 'hope.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'hope',
+        'USER': 'gridlockdev',
+        'PASSWORD': 'DLSU1234',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
 
-DATABASES = {}
-DATABASES['default'] = dj_database_url.config()
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+
+#DATABASES['default'] = dj_database_url.config()
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
@@ -116,7 +125,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Berlin'
 
 USE_I18N = True
 
